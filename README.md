@@ -1,6 +1,5 @@
-
 <div align="center">
-  <h1>Forget the Data and Fine-Tuning! Just Fold the Network to Compress</h1>
+  <h1>Forget the Data and Fine-Tuning! Just Fold the Network to Compress @ ICLR 2025</h1>
   <img src="docs/imgs/model_folding_logo.png" width="200" alt="Model Folding favicon" style="border-radius: 5%;"><br />
 <a href="https://openreview.net/forum?id=W2Wkp9MQsF" target="_blank"><img src="https://img.shields.io/badge/OpenReview-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt=""></a>
 <a href="https://wangdongdong.wang/publication/modelfolding" target="_blank"><img src="https://img.shields.io/badge/Paper_Homepage-4A154B?style=for-the-badge&logo=Openreview&logoColor=white" alt=""></a>
@@ -10,7 +9,19 @@
 
 </div>
 
+<div align="center">
 
+[Dong Wang]()\*, 
+[Haris Šikić]()\*, 
+[Lothar Thiele](), 
+[Olga Saukh](),\
+Graz University of Technology, Austria  \
+Complexity Science Hub Vienna, Austria \
+ETH Zurich, Switzerland
+
+\*: Equal Contribution.
+
+</div>
 
 <h2 id="model-folding">🎉 Introduction</h2>
 
@@ -96,6 +107,9 @@ CUDA_VISIBLE_DEVICES=1 python train.py --dataset=CIFAR100 --model=resnet50 --bat
 > As model folding in an ongoing research, we provide two versions of code for you to try.
 > In one version, you can reproduce the results in the paper for all computer vision models. 
 > In the other version, you can try the latest code for both LLM models evaluated in the paper and computer vision models for the ongoing research.
+
+
+![model_folding_pipeline](./docs/imgs/model_folding_pipeline.jpg)
 
 
 ### Folding Computer Vision Models
