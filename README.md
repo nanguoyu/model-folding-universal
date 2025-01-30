@@ -64,9 +64,13 @@ For models trained on CIFAR10, CIFAR100, etc., we train the models from scratch 
 
 For LLM models including LLaMA1, LLaMA2, etc.
 
-We use the implementation of [Hugging Face](https://github.com/huggingface/transformers) to load the model. Please make sure your hugging face account is logged in and authorized to access the models by Meta.
+We use the implementation of [Hugging Face Transformers](https://github.com/huggingface/transformers) to load the model. Please make sure your hugging face account is logged in and authorized to access the models by Meta.
 
-### Model training
+### Prepare the weights
+
+For computer vision models trained on ImageNet, we reuse the pre-trained weights from [torchvision](https://github.com/pytorch/vision/tree/main).
+For models trained on CIFAR10, CIFAR100, etc., we train the models from scratch (see [train.py](./train.py)).
+For LLM models, we use the pre-trained weights from Meta and loaded by [Hugging Face Transformers](https://github.com/huggingface/transformers).
 
 You can use the following commands to train the models. With --wider_factor to train the wider model, you can control the width of the model.
 The well-trained models will be saved in the `./weights` folder, with a name of `{model}_{dataset}.pth` or `{model}_{wider_factor}Xwider_{dataset}.pth`.
