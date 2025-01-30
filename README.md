@@ -100,7 +100,7 @@ CUDA_VISIBLE_DEVICES=1 python train.py --dataset=CIFAR100 --model=resnet50 --bat
 
 ### Folding Computer Vision Models
 
-Option 1 (suggested): To reproduce the results in the paper for all computer vision models, you can go to [ModelFolding](https://github.com/marza96/ModelFolding).
+**Option 1 (suggested)**: To reproduce the results in the paper for all computer vision models, you can go to [ModelFolding](https://github.com/marza96/ModelFolding).
 
 Option 2: To use this universal folding code for all computer vision models, you can use the following command:
 ```Shell
