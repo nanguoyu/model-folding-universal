@@ -49,7 +49,7 @@ pip3 install git+https://github.com/IBM/hartigan-kmeans.git
 ### Prepare the dataset
 
 For computer vision dataset
-- In case you installed the FFCV, you can go to [prepare_dataset.py](./prepare_dataset.py) to generate '.beton' dataset files.
+- In case you installed the FFCV, you can go to [prepare_dataset.py](./prepare_dataset.py) to generate `.beton` dataset files.
 - In case you do not want to use FFCV, image dataset will be automatically downloaded from torchvision at the 1st time you run the code.
 
 For LLM dataset
