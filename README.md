@@ -129,7 +129,7 @@ CUDA_VISIBLE_DEVICES=0 python folding.py  --gpus=0 --dataset=wikitext2  --model=
 ```
 You can adjust the folding ratio by changing the parameter `pr` in the `llama_1_7b_hf_recipe.py` file.
 
-If you want to do zero-shot evaluation, please install evaluation code from a modified version of EleutherAI LM Harness from [Wanda Github repo](https://github.com/wangdongdong99/wanda) and set `--zero_shot_eval`.
+If you want to do zero-shot evaluation, please install evaluation code from a modified version of EleutherAI LM Harness from [Wanda Github repo](https://github.com/locuslab/wanda?tab=readme-ov-file#zero-shot-evaluation) and set `--zero_shot_eval`.
 
 ```Shell
 CUDA_VISIBLE_DEVICES=0 python folding.py  --gpus=0 --dataset=wikitext2  --model=llama_1_7b_hf --model_perm_config_path='./config/llama_1_7b_hf_perm.json' --zero_shot_eval
