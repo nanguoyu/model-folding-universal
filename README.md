@@ -3,7 +3,7 @@
   <img src="docs/imgs/model_folding_logo.png" width="200" alt="Model Folding favicon" style="border-radius: 5%;"><br />
 <a href="https://openreview.net/forum?id=W2Wkp9MQsF" target="_blank"><img src="https://img.shields.io/badge/OpenReview-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt=""></a>
 <a href="https://wangdongdong.wang/publication/modelfolding" target="_blank"><img src="https://img.shields.io/badge/Paper_Homepage-4A154B?style=for-the-badge&logo=Openreview&logoColor=white" alt=""></a>
-<a href="https://github.com/nanguoyu/model-folding" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt=""></a> <br />
+<a href="https://github.com/nanguoyu/model-folding-universal" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt=""></a> <br />
 
  <a href="#model-folding">🎉 Introduction</a> | <a href="#Installation">⚙️ Installation Guide</a> | <a href="#Preparation">📂 Preparation</a> | <a href="#Folding">🔄 Folding</a> | <a href="#citation">📑 Citation</a>
 
