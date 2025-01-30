@@ -102,7 +102,7 @@ CUDA_VISIBLE_DEVICES=1 python train.py --dataset=CIFAR100 --model=resnet50 --bat
 
 **Option 1 (suggested)**: To reproduce the results in the paper for all computer vision models, you can go to [ModelFolding](https://github.com/marza96/ModelFolding).
 
-Option 2: To use this universal folding code for all computer vision models, you can use the following command:
+Option 2: To use this universal folding code for most computer vision models, you can use the following command:
 ```Shell
 CUDA_VISIBLE_DEVICES=2 python folding.py  --gpus=0 --dataset=CIFAR10 --wider_factor=1 --weight='./weights/resnet18_CIFAR10.pth' --model=resnet18 --model_perm_config_path='./config/resnet18_perm.json'
 ```
