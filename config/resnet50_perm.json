@@ -1,0 +1,765 @@
+{
+    "input": {
+        "pre": null,
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "conv1": {
+        "pre": "input",
+        "do_folding": true,
+        "num_channels": 64,
+        "consistent_map": null
+    },
+    "bn1": {
+        "pre": "conv1",
+        "do_folding": true,
+        "num_channels": 64,
+        "consistent_map": null
+    },
+    "relu": {
+        "pre": "bn1",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "maxpool": {
+        "pre": "bn1",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "layer1.0.conv1": {
+        "pre": "bn1",
+        "do_folding": true,
+        "num_channels": 64,
+        "consistent_map": null
+    },
+    "layer1.0.bn1": {
+        "pre": "layer1.0.conv1",
+        "do_folding": true,
+        "num_channels": 64,
+        "consistent_map": null
+    },
+    "layer1.0.conv2": {
+        "pre": "layer1.0.bn1",
+        "do_folding": true,
+        "num_channels": 64,
+        "consistent_map": null
+    },
+    "layer1.0.bn2": {
+        "pre": "layer1.0.conv2",
+        "do_folding": true,
+        "num_channels": 64,
+        "consistent_map": null
+    },
+    "layer1.0.conv3": {
+        "pre": "layer1.0.bn2",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer1.0.bn3": {
+        "pre": "layer1.0.conv3",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer1.0.relu": {
+        "pre": "layer1.0.bn3",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "layer1.0.downsample.0": {
+        "pre": "conv1",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": "layer1.0.conv3"
+    },
+    "layer1.0.downsample.1": {
+        "pre": "layer1.0.downsample.0",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer1.1.conv1": {
+        "pre": "layer1.0.bn3",
+        "do_folding": true,
+        "num_channels": 64,
+        "consistent_map": null
+    },
+    "layer1.1.bn1": {
+        "pre": "layer1.1.conv1",
+        "do_folding": true,
+        "num_channels": 64,
+        "consistent_map": null
+    },
+    "layer1.1.conv2": {
+        "pre": "layer1.1.bn1",
+        "do_folding": true,
+        "num_channels": 64,
+        "consistent_map": null
+    },
+    "layer1.1.bn2": {
+        "pre": "layer1.1.conv2",
+        "do_folding": true,
+        "num_channels": 64,
+        "consistent_map": null
+    },
+    "layer1.1.conv3": {
+        "pre": "layer1.1.bn2",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": "layer1.0.conv3"
+    },
+    "layer1.1.bn3": {
+        "pre": "layer1.1.conv3",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer1.1.relu": {
+        "pre": "layer1.1.bn3",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "layer1.2.conv1": {
+        "pre": "layer1.1.bn3",
+        "do_folding": true,
+        "num_channels": 64,
+        "consistent_map": null
+    },
+    "layer1.2.bn1": {
+        "pre": "layer1.2.conv1",
+        "do_folding": true,
+        "num_channels": 64,
+        "consistent_map": null
+    },
+    "layer1.2.conv2": {
+        "pre": "layer1.2.bn1",
+        "do_folding": true,
+        "num_channels": 64,
+        "consistent_map": null
+    },
+    "layer1.2.bn2": {
+        "pre": "layer1.2.conv2",
+        "do_folding": true,
+        "num_channels": 64,
+        "consistent_map": null
+    },
+    "layer1.2.conv3": {
+        "pre": "layer1.2.bn2",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": "layer1.1.conv3"
+    },
+    "layer1.2.bn3": {
+        "pre": "layer1.2.conv3",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer1.2.relu": {
+        "pre": "layer1.2.bn3",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "layer2.0.conv1": {
+        "pre": "layer1.2.bn3",
+        "do_folding": true,
+        "num_channels": 128,
+        "consistent_map": null
+    },
+    "layer2.0.bn1": {
+        "pre": "layer2.0.conv1",
+        "do_folding": true,
+        "num_channels": 128,
+        "consistent_map": null
+    },
+    "layer2.0.conv2": {
+        "pre": "layer2.0.bn1",
+        "do_folding": true,
+        "num_channels": 128,
+        "consistent_map": null
+    },
+    "layer2.0.bn2": {
+        "pre": "layer2.0.conv2",
+        "do_folding": true,
+        "num_channels": 128,
+        "consistent_map": null
+    },
+    "layer2.0.conv3": {
+        "pre": "layer2.0.bn2",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "layer2.0.bn3": {
+        "pre": "layer2.0.conv3",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "layer2.0.relu": {
+        "pre": "layer2.0.bn3",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "layer2.0.downsample.0": {
+        "pre": "layer1.2.conv3",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": "layer2.0.conv3"
+    },
+    "layer2.0.downsample.1": {
+        "pre": "layer2.0.downsample.0",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "layer2.1.conv1": {
+        "pre": "layer2.0.bn3",
+        "do_folding": true,
+        "num_channels": 128,
+        "consistent_map": null
+    },
+    "layer2.1.bn1": {
+        "pre": "layer2.1.conv1",
+        "do_folding": true,
+        "num_channels": 128,
+        "consistent_map": null
+    },
+    "layer2.1.conv2": {
+        "pre": "layer2.1.bn1",
+        "do_folding": true,
+        "num_channels": 128,
+        "consistent_map": null
+    },
+    "layer2.1.bn2": {
+        "pre": "layer2.1.conv2",
+        "do_folding": true,
+        "num_channels": 128,
+        "consistent_map": null
+    },
+    "layer2.1.conv3": {
+        "pre": "layer2.1.bn2",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": "layer2.0.conv3"
+    },
+    "layer2.1.bn3": {
+        "pre": "layer2.1.conv3",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "layer2.1.relu": {
+        "pre": "layer2.1.bn3",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "layer2.2.conv1": {
+        "pre": "layer2.1.bn3",
+        "do_folding": true,
+        "num_channels": 128,
+        "consistent_map": null
+    },
+    "layer2.2.bn1": {
+        "pre": "layer2.2.conv1",
+        "do_folding": true,
+        "num_channels": 128,
+        "consistent_map": null
+    },
+    "layer2.2.conv2": {
+        "pre": "layer2.2.bn1",
+        "do_folding": true,
+        "num_channels": 128,
+        "consistent_map": null
+    },
+    "layer2.2.bn2": {
+        "pre": "layer2.2.conv2",
+        "do_folding": true,
+        "num_channels": 128,
+        "consistent_map": null
+    },
+    "layer2.2.conv3": {
+        "pre": "layer2.2.bn2",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": "layer2.1.conv3"
+    },
+    "layer2.2.bn3": {
+        "pre": "layer2.2.conv3",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "layer2.2.relu": {
+        "pre": "layer2.2.bn3",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "layer2.3.conv1": {
+        "pre": "layer2.2.bn3",
+        "do_folding": true,
+        "num_channels": 128,
+        "consistent_map": null
+    },
+    "layer2.3.bn1": {
+        "pre": "layer2.3.conv1",
+        "do_folding": true,
+        "num_channels": 128,
+        "consistent_map": null
+    },
+    "layer2.3.conv2": {
+        "pre": "layer2.3.bn1",
+        "do_folding": true,
+        "num_channels": 128,
+        "consistent_map": null
+    },
+    "layer2.3.bn2": {
+        "pre": "layer2.3.conv2",
+        "do_folding": true,
+        "num_channels": 128,
+        "consistent_map": null
+    },
+    "layer2.3.conv3": {
+        "pre": "layer2.3.bn2",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": "layer2.2.conv3"
+    },
+    "layer2.3.bn3": {
+        "pre": "layer2.3.conv3",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "layer2.3.relu": {
+        "pre": "layer2.3.bn3",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "layer3.0.conv1": {
+        "pre": "layer2.3.bn3",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.0.bn1": {
+        "pre": "layer3.0.conv1",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.0.conv2": {
+        "pre": "layer3.0.bn1",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.0.bn2": {
+        "pre": "layer3.0.conv2",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.0.conv3": {
+        "pre": "layer3.0.bn2",
+        "do_folding": true,
+        "num_channels": 1024,
+        "consistent_map": null
+    },
+    "layer3.0.bn3": {
+        "pre": "layer3.0.conv3",
+        "do_folding": true,
+        "num_channels": 1024,
+        "consistent_map": null
+    },
+    "layer3.0.relu": {
+        "pre": "layer3.0.bn3",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "layer3.0.downsample.0": {
+        "pre": "layer2.3.conv3",
+        "do_folding": true,
+        "num_channels": 1024,
+        "consistent_map": "layer3.0.conv3"
+    },
+    "layer3.0.downsample.1": {
+        "pre": "layer3.0.downsample.0",
+        "do_folding": true,
+        "num_channels": 1024,
+        "consistent_map": null
+    },
+    "layer3.1.conv1": {
+        "pre": "layer3.0.bn3",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.1.bn1": {
+        "pre": "layer3.1.conv1",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.1.conv2": {
+        "pre": "layer3.1.bn1",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.1.bn2": {
+        "pre": "layer3.1.conv2",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.1.conv3": {
+        "pre": "layer3.1.bn2",
+        "do_folding": true,
+        "num_channels": 1024,
+        "consistent_map": "layer3.0.conv3"
+    },
+    "layer3.1.bn3": {
+        "pre": "layer3.1.conv3",
+        "do_folding": true,
+        "num_channels": 1024,
+        "consistent_map": null
+    },
+    "layer3.1.relu": {
+        "pre": "layer3.1.bn3",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "layer3.2.conv1": {
+        "pre": "layer3.1.bn3",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.2.bn1": {
+        "pre": "layer3.2.conv1",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.2.conv2": {
+        "pre": "layer3.2.bn1",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.2.bn2": {
+        "pre": "layer3.2.conv2",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.2.conv3": {
+        "pre": "layer3.2.bn2",
+        "do_folding": true,
+        "num_channels": 1024,
+        "consistent_map": "layer3.1.conv3"
+    },
+    "layer3.2.bn3": {
+        "pre": "layer3.2.conv3",
+        "do_folding": true,
+        "num_channels": 1024,
+        "consistent_map": null
+    },
+    "layer3.2.relu": {
+        "pre": "layer3.2.bn3",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "layer3.3.conv1": {
+        "pre": "layer3.2.bn3",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.3.bn1": {
+        "pre": "layer3.3.conv1",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.3.conv2": {
+        "pre": "layer3.3.bn1",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.3.bn2": {
+        "pre": "layer3.3.conv2",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.3.conv3": {
+        "pre": "layer3.3.bn2",
+        "do_folding": true,
+        "num_channels": 1024,
+        "consistent_map": "layer3.2.conv3"
+    },
+    "layer3.3.bn3": {
+        "pre": "layer3.3.conv3",
+        "do_folding": true,
+        "num_channels": 1024,
+        "consistent_map": null
+    },
+    "layer3.3.relu": {
+        "pre": "layer3.3.bn3",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "layer3.4.conv1": {
+        "pre": "layer3.3.bn3",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.4.bn1": {
+        "pre": "layer3.4.conv1",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.4.conv2": {
+        "pre": "layer3.4.bn1",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.4.bn2": {
+        "pre": "layer3.4.conv2",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.4.conv3": {
+        "pre": "layer3.4.bn2",
+        "do_folding": true,
+        "num_channels": 1024,
+        "consistent_map": "layer3.3.conv3"
+    },
+    "layer3.4.bn3": {
+        "pre": "layer3.4.conv3",
+        "do_folding": true,
+        "num_channels": 1024,
+        "consistent_map": null
+    },
+    "layer3.4.relu": {
+        "pre": "layer3.4.bn3",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "layer3.5.conv1": {
+        "pre": "layer3.4.bn3",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.5.bn1": {
+        "pre": "layer3.5.conv1",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.5.conv2": {
+        "pre": "layer3.5.bn1",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.5.bn2": {
+        "pre": "layer3.5.conv2",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "layer3.5.conv3": {
+        "pre": "layer3.5.bn2",
+        "do_folding": true,
+        "num_channels": 1024,
+        "consistent_map": "layer3.4.conv3"
+    },
+    "layer3.5.bn3": {
+        "pre": "layer3.5.conv3",
+        "do_folding": true,
+        "num_channels": 1024,
+        "consistent_map": null
+    },
+    "layer3.5.relu": {
+        "pre": "layer3.5.bn3",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "layer4.0.conv1": {
+        "pre": "layer3.5.bn3",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "layer4.0.bn1": {
+        "pre": "layer4.0.conv1",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "layer4.0.conv2": {
+        "pre": "layer4.0.bn1",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "layer4.0.bn2": {
+        "pre": "layer4.0.conv2",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "layer4.0.conv3": {
+        "pre": "layer4.0.bn2",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "layer4.0.bn3": {
+        "pre": "layer4.0.conv3",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "layer4.0.relu": {
+        "pre": "layer4.0.bn3",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "layer4.0.downsample.0": {
+        "pre": "layer3.5.conv3",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "layer4.0.conv3"
+    },
+    "layer4.0.downsample.1": {
+        "pre": "layer4.0.downsample.0",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "layer4.1.conv1": {
+        "pre": "layer4.0.bn3",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "layer4.1.bn1": {
+        "pre": "layer4.1.conv1",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "layer4.1.conv2": {
+        "pre": "layer4.1.bn1",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "layer4.1.bn2": {
+        "pre": "layer4.1.conv2",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "layer4.1.conv3": {
+        "pre": "layer4.1.bn2",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "layer4.0.conv3"
+    },
+    "layer4.1.bn3": {
+        "pre": "layer4.1.conv3",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "layer4.1.relu": {
+        "pre": "layer4.1.bn3",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "layer4.2.conv1": {
+        "pre": "layer4.1.bn3",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "layer4.2.bn1": {
+        "pre": "layer4.2.conv1",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "layer4.2.conv2": {
+        "pre": "layer4.2.bn1",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "layer4.2.bn2": {
+        "pre": "layer4.2.conv2",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "layer4.2.conv3": {
+        "pre": "layer4.2.bn2",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "layer4.1.conv3"
+    },
+    "layer4.2.bn3": {
+        "pre": "layer4.2.conv3",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "layer4.2.relu": {
+        "pre": "layer4.2.bn3",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "avgpool": {
+        "pre": "layer4.2.bn3",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "fc": {
+        "pre": "layer4.2.bn3",
+        "do_folding": true,
+        "num_channels": 10,
+        "consistent_map": null
+    },
+    "final_module_name": "fc"
+}

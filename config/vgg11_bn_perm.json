@@ -1,0 +1,231 @@
+{
+    "input": {
+        "pre": null,
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "features.0": {
+        "pre": "input",
+        "do_folding": true,
+        "num_channels": 64,
+        "consistent_map": null
+    },
+    "features.1": {
+        "pre": "features.0",
+        "do_folding": true,
+        "num_channels": 64,
+        "consistent_map": null
+    },
+    "features.2": {
+        "pre": "features.1",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "features.3": {
+        "pre": "features.2",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "features.4": {
+        "pre": "features.3",
+        "do_folding": true,
+        "num_channels": 128,
+        "consistent_map": null
+    },
+    "features.5": {
+        "pre": "features.4",
+        "do_folding": true,
+        "num_channels": 128,
+        "consistent_map": null
+    },
+    "features.6": {
+        "pre": "features.5",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "features.7": {
+        "pre": "features.6",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "features.8": {
+        "pre": "features.7",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "features.9": {
+        "pre": "features.8",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "features.10": {
+        "pre": "features.9",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "features.11": {
+        "pre": "features.10",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "features.12": {
+        "pre": "features.11",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "features.13": {
+        "pre": "features.12",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "features.14": {
+        "pre": "features.13",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "features.15": {
+        "pre": "features.14",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "features.16": {
+        "pre": "features.15",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "features.17": {
+        "pre": "features.16",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "features.18": {
+        "pre": "features.17",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "features.19": {
+        "pre": "features.18",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "features.20": {
+        "pre": "features.19",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "features.21": {
+        "pre": "features.20",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "features.22": {
+        "pre": "features.21",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "features.23": {
+        "pre": "features.22",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "features.24": {
+        "pre": "features.23",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "features.25": {
+        "pre": "features.24",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "features.26": {
+        "pre": "features.25",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "features.27": {
+        "pre": "features.26",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "features.28": {
+        "pre": "features.27",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "avgpool": {
+        "pre": "features.28",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "classifier.0": {
+        "pre": "features.28",
+        "do_folding": true,
+        "num_channels": 4096,
+        "consistent_map": null
+    },
+    "classifier.1": {
+        "pre": "classifier.0",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "classifier.2": {
+        "pre": "classifier.1",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "classifier.3": {
+        "pre": "classifier.2",
+        "do_folding": true,
+        "num_channels": 4096,
+        "consistent_map": null
+    },
+    "classifier.4": {
+        "pre": "classifier.3",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "classifier.5": {
+        "pre": "classifier.4",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "classifier.6": {
+        "pre": "classifier.5",
+        "do_folding": true,
+        "num_channels": 1000,
+        "consistent_map": null
+    },
+    "final_module_name": "classifier.6"
+}

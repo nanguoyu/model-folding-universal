@@ -1,0 +1,81 @@
+{
+    "input": {
+        "pre": null,
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "conv1": {
+        "pre": "input",
+        "do_folding": true,
+        "num_channels": 16,
+        "consistent_map": null
+    },
+    "relu2": {
+        "pre": "conv1",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "pool3": {
+        "pre": "conv1",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "conv4": {
+        "pre": "conv1",
+        "do_folding": true,
+        "num_channels": 64,
+        "consistent_map": null
+    },
+    "relu5": {
+        "pre": "conv4",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "pool6": {
+        "pre": "conv4",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "fl7": {
+        "pre": "conv4",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "fc8": {
+        "pre": "conv4",
+        "do_folding": true,
+        "num_channels": 512,
+        "consistent_map": null
+    },
+    "relu9": {
+        "pre": "fc8",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "fc10": {
+        "pre": "fc8",
+        "do_folding": true,
+        "num_channels": 256,
+        "consistent_map": null
+    },
+    "relu11": {
+        "pre": "fc10",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "fc12": {
+        "pre": "fc10",
+        "do_folding": true,
+        "num_channels": 10,
+        "consistent_map": null
+    },
+    "final_module_name": "fc12"
+}

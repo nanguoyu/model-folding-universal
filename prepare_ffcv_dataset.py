@@ -1,0 +1,130 @@
+"""
+FFCV Dataset Preparation Script
+------------------------------
+
+This script converts various image datasets (CIFAR10, CIFAR100, ImageNet) into FFCV format
+for faster data loading during training. FFCV (Fast Forward Computer Vision) is a data loading
+system that significantly accelerates training of deep learning models.
+
+Supported datasets:
+- CIFAR10 (including split variants A/B)
+- CIFAR100
+- ImageNet
+- MNIST
+- FashionMNIST
+- SVHN
+
+Author: Dong Wang (dong.wang@tugraz.at)
+Date: 2024-01-30
+
+Note: you should use the commands at the bottom of the script to prepare the dataset, just once.
+"""
+
+import os
+from torch.utils.data import DataLoader
+import torchvision.transforms as T
+from torchvision import transforms, datasets
+import numpy as np
+import torch
+import torchvision
+
+dataset_infor = {
+    'FashionMNIST':{'num_classes':10, 'num_channels':1},
+    'MNIST':{'num_classes':10, 'num_channels':1},
+    'ImageNet':{'num_classes':1000, 'num_channels':3},
+    'CIFAR10':{'num_classes':10, 'num_channels':3},
+    'CIFAR100':{'num_classes':100, 'num_channels':3},
+    'CIFAR10_split_a':{'num_classes':10, 'num_channels':3},
+    'CIFAR10_split_b':{'num_classes':10, 'num_channels':3},
+}
+
+def prepare_data(split, dataset_name, datadir):
+    import ffcv
+    from ffcv.fields import IntField, RGBImageField
+    from ffcv.writer import DatasetWriter
+    if dataset_name in ['CIFAR10_split_a', 'CIFAR10_split_b']:
+        get_dataset = getattr(datasets, "CIFAR10")
+    else:
+        get_dataset = getattr(datasets, dataset_name)
+
+    import os
+    output_dir = './ffcv_datasets'
+    os.makedirs(output_dir, exist_ok=True)
+    
+    if split=="train":
+        sub="train"
+    else:
+        sub="test"
+
+    output_file = f'{output_dir}/{dataset_name}_{sub}_ffcv.beton'
+
+    if dataset_name == 'SVHN':
+        image_field = RGBImageField(write_mode='smart', max_resolution=32, jpeg_quality=90)
+        if split == 'train':
+            dataset = get_dataset(root=datadir, split='train', download=True)
+        else:
+            dataset = get_dataset(root=datadir, split='test', download=True)
+    elif dataset_name== 'ImageNet':
+        image_field = RGBImageField(write_mode='smart', max_resolution=256, jpeg_quality=90)
+        if split == 'train': 
+            dataset = get_dataset(root=datadir, split='train')
+        else:
+            dataset = get_dataset(root=datadir, split='val')
+    elif dataset_name == 'CIFAR10_split_a':
+        split_label = 5
+        image_field = RGBImageField(write_mode='smart', max_resolution=32, jpeg_quality=90)
+        if split == 'train':
+            dataset = get_dataset(root=datadir, train=True, download=True)
+            np_target = np.array(dataset.targets)
+            dataset.targets = np_target[np_target < split_label]
+            dataset.targets = dataset.targets[dataset.targets < split_label]
+            dataset.data = dataset.data[np_target < split_label]
+        else:
+            dataset = get_dataset(root=datadir, train=False, download=True)
+            np_target = np.array(dataset.targets)
+            dataset.targets = np_target[np_target < split_label]
+            dataset.targets = dataset.targets[dataset.targets < split_label]
+            dataset.data = dataset.data[np_target < split_label]
+    elif dataset_name == 'CIFAR10_split_b':
+        split_label = 4
+        image_field = RGBImageField(write_mode='smart', max_resolution=32, jpeg_quality=90)
+        if split == 'train':
+            dataset = get_dataset(root=datadir, train=True, download=True)
+            np_target = np.array(dataset.targets)
+            dataset.targets = np_target[np_target > split_label]
+            dataset.targets = dataset.targets[dataset.targets > split_label]
+            dataset.data = dataset.data[np_target > split_label]
+        else:
+            dataset = get_dataset(root=datadir, train=False, download=True)
+            np_target = np.array(dataset.targets)
+            dataset.targets = np_target[np_target > split_label]
+            dataset.targets = dataset.targets[dataset.targets > split_label]
+            dataset.data = dataset.data[np_target > split_label]
+    else:
+        image_field = RGBImageField(write_mode='smart', max_resolution=32, jpeg_quality=90)
+        if split == 'train':
+            dataset = get_dataset(root=datadir, train=True, download=True)
+        else:
+            dataset = get_dataset(root=datadir, train=False, download=True)
+
+    write_config = {
+        'image': image_field,
+        'label': IntField()
+    }
+
+    writer = DatasetWriter(output_file, write_config)
+    writer.from_indexed_dataset(dataset)
+
+# Now you can generate FFCV dataset before use it for training.
+
+# CIFAT10
+prepare_data(split="train", dataset_name="CIFAR10", datadir="datasets")
+prepare_data(split="test", dataset_name="CIFAR10", datadir="datasets")
+
+# CIFAR100
+prepare_data(split="train", dataset_name="CIFAR100", datadir="datasets")
+prepare_data(split="test", dataset_name="CIFAR100", datadir="datasets")
+
+# For ImageNet, `~/data/ImageNet` should be a folder containing files ILSVRC2012_devkit_t12.tar.gz, ILSVRC2012_img_train.tar, ILSVRC2012_img_val.tar 
+prepare_data(split="train", dataset_name="ImageNet", datadir="~/data/ImageNet")
+prepare_data(split="test", dataset_name="ImageNet", datadir="~/data/ImageNet")

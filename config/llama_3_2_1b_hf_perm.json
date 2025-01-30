@@ -1,0 +1,609 @@
+{
+    "input": {
+        "pre": null,
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "model.embed_tokens": {
+        "pre": "input",
+        "do_folding": false,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.0.input_layernorm": {
+        "pre": "model.embed_tokens",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.0.self_attn_qkv": {
+        "pre": "model.layers.0.input_layernorm",
+        "do_folding": true,
+        "num_channels": 8,
+        "consistent_map": null
+    },
+    "model.layers.0.self_attn_o": {
+        "pre": "model.layers.0.self_attn_qkv",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.0.post_attention_layernorm": {
+        "pre": "model.layers.0.self_attn_o",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.0.mlp_gateup": {
+        "pre": "model.layers.0.post_attention_layernorm",
+        "do_folding": true,
+        "num_channels": 8192,
+        "consistent_map": null
+    },
+    "model.layers.0.mlp_down": {
+        "pre": "model.layers.0.mlp_gateup",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.1.input_layernorm": {
+        "pre": "model.layers.0.mlp_down",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.1.self_attn_qkv": {
+        "pre": "model.layers.1.input_layernorm",
+        "do_folding": true,
+        "num_channels": 8,
+        "consistent_map": null
+    },
+    "model.layers.1.self_attn_o": {
+        "pre": "model.layers.1.self_attn_qkv",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.1.post_attention_layernorm": {
+        "pre": "model.layers.1.self_attn_o",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.1.mlp_gateup": {
+        "pre": "model.layers.1.post_attention_layernorm",
+        "do_folding": true,
+        "num_channels": 8192,
+        "consistent_map": null
+    },
+    "model.layers.1.mlp_down": {
+        "pre": "model.layers.1.mlp_gateup",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.2.input_layernorm": {
+        "pre": "model.layers.1.mlp_down",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.2.self_attn_qkv": {
+        "pre": "model.layers.2.input_layernorm",
+        "do_folding": true,
+        "num_channels": 8,
+        "consistent_map": null
+    },
+    "model.layers.2.self_attn_o": {
+        "pre": "model.layers.2.self_attn_qkv",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.2.post_attention_layernorm": {
+        "pre": "model.layers.2.self_attn_o",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.2.mlp_gateup": {
+        "pre": "model.layers.2.post_attention_layernorm",
+        "do_folding": true,
+        "num_channels": 8192,
+        "consistent_map": null
+    },
+    "model.layers.2.mlp_down": {
+        "pre": "model.layers.2.mlp_gateup",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.3.input_layernorm": {
+        "pre": "model.layers.2.mlp_down",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.3.self_attn_qkv": {
+        "pre": "model.layers.3.input_layernorm",
+        "do_folding": true,
+        "num_channels": 8,
+        "consistent_map": null
+    },
+    "model.layers.3.self_attn_o": {
+        "pre": "model.layers.3.self_attn_qkv",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.3.post_attention_layernorm": {
+        "pre": "model.layers.3.self_attn_o",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.3.mlp_gateup": {
+        "pre": "model.layers.3.post_attention_layernorm",
+        "do_folding": true,
+        "num_channels": 8192,
+        "consistent_map": null
+    },
+    "model.layers.3.mlp_down": {
+        "pre": "model.layers.3.mlp_gateup",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.4.input_layernorm": {
+        "pre": "model.layers.3.mlp_down",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.4.self_attn_qkv": {
+        "pre": "model.layers.4.input_layernorm",
+        "do_folding": true,
+        "num_channels": 8,
+        "consistent_map": null
+    },
+    "model.layers.4.self_attn_o": {
+        "pre": "model.layers.4.self_attn_qkv",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.4.post_attention_layernorm": {
+        "pre": "model.layers.4.self_attn_o",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.4.mlp_gateup": {
+        "pre": "model.layers.4.post_attention_layernorm",
+        "do_folding": true,
+        "num_channels": 8192,
+        "consistent_map": null
+    },
+    "model.layers.4.mlp_down": {
+        "pre": "model.layers.4.mlp_gateup",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.5.input_layernorm": {
+        "pre": "model.layers.4.mlp_down",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.5.self_attn_qkv": {
+        "pre": "model.layers.5.input_layernorm",
+        "do_folding": true,
+        "num_channels": 8,
+        "consistent_map": null
+    },
+    "model.layers.5.self_attn_o": {
+        "pre": "model.layers.5.self_attn_qkv",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.5.post_attention_layernorm": {
+        "pre": "model.layers.5.self_attn_o",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.5.mlp_gateup": {
+        "pre": "model.layers.5.post_attention_layernorm",
+        "do_folding": true,
+        "num_channels": 8192,
+        "consistent_map": null
+    },
+    "model.layers.5.mlp_down": {
+        "pre": "model.layers.5.mlp_gateup",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.6.input_layernorm": {
+        "pre": "model.layers.5.mlp_down",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.6.self_attn_qkv": {
+        "pre": "model.layers.6.input_layernorm",
+        "do_folding": true,
+        "num_channels": 8,
+        "consistent_map": null
+    },
+    "model.layers.6.self_attn_o": {
+        "pre": "model.layers.6.self_attn_qkv",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.6.post_attention_layernorm": {
+        "pre": "model.layers.6.self_attn_o",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.6.mlp_gateup": {
+        "pre": "model.layers.6.post_attention_layernorm",
+        "do_folding": true,
+        "num_channels": 8192,
+        "consistent_map": null
+    },
+    "model.layers.6.mlp_down": {
+        "pre": "model.layers.6.mlp_gateup",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.7.input_layernorm": {
+        "pre": "model.layers.6.mlp_down",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.7.self_attn_qkv": {
+        "pre": "model.layers.7.input_layernorm",
+        "do_folding": true,
+        "num_channels": 8,
+        "consistent_map": null
+    },
+    "model.layers.7.self_attn_o": {
+        "pre": "model.layers.7.self_attn_qkv",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.7.post_attention_layernorm": {
+        "pre": "model.layers.7.self_attn_o",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.7.mlp_gateup": {
+        "pre": "model.layers.7.post_attention_layernorm",
+        "do_folding": true,
+        "num_channels": 8192,
+        "consistent_map": null
+    },
+    "model.layers.7.mlp_down": {
+        "pre": "model.layers.7.mlp_gateup",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.8.input_layernorm": {
+        "pre": "model.layers.7.mlp_down",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.8.self_attn_qkv": {
+        "pre": "model.layers.8.input_layernorm",
+        "do_folding": true,
+        "num_channels": 8,
+        "consistent_map": null
+    },
+    "model.layers.8.self_attn_o": {
+        "pre": "model.layers.8.self_attn_qkv",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.8.post_attention_layernorm": {
+        "pre": "model.layers.8.self_attn_o",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.8.mlp_gateup": {
+        "pre": "model.layers.8.post_attention_layernorm",
+        "do_folding": true,
+        "num_channels": 8192,
+        "consistent_map": null
+    },
+    "model.layers.8.mlp_down": {
+        "pre": "model.layers.8.mlp_gateup",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.9.input_layernorm": {
+        "pre": "model.layers.8.mlp_down",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.9.self_attn_qkv": {
+        "pre": "model.layers.9.input_layernorm",
+        "do_folding": true,
+        "num_channels": 8,
+        "consistent_map": null
+    },
+    "model.layers.9.self_attn_o": {
+        "pre": "model.layers.9.self_attn_qkv",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.9.post_attention_layernorm": {
+        "pre": "model.layers.9.self_attn_o",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.9.mlp_gateup": {
+        "pre": "model.layers.9.post_attention_layernorm",
+        "do_folding": true,
+        "num_channels": 8192,
+        "consistent_map": null
+    },
+    "model.layers.9.mlp_down": {
+        "pre": "model.layers.9.mlp_gateup",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.10.input_layernorm": {
+        "pre": "model.layers.9.mlp_down",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.10.self_attn_qkv": {
+        "pre": "model.layers.10.input_layernorm",
+        "do_folding": true,
+        "num_channels": 8,
+        "consistent_map": null
+    },
+    "model.layers.10.self_attn_o": {
+        "pre": "model.layers.10.self_attn_qkv",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.10.post_attention_layernorm": {
+        "pre": "model.layers.10.self_attn_o",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.10.mlp_gateup": {
+        "pre": "model.layers.10.post_attention_layernorm",
+        "do_folding": true,
+        "num_channels": 8192,
+        "consistent_map": null
+    },
+    "model.layers.10.mlp_down": {
+        "pre": "model.layers.10.mlp_gateup",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.11.input_layernorm": {
+        "pre": "model.layers.10.mlp_down",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.11.self_attn_qkv": {
+        "pre": "model.layers.11.input_layernorm",
+        "do_folding": true,
+        "num_channels": 8,
+        "consistent_map": null
+    },
+    "model.layers.11.self_attn_o": {
+        "pre": "model.layers.11.self_attn_qkv",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.11.post_attention_layernorm": {
+        "pre": "model.layers.11.self_attn_o",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.11.mlp_gateup": {
+        "pre": "model.layers.11.post_attention_layernorm",
+        "do_folding": true,
+        "num_channels": 8192,
+        "consistent_map": null
+    },
+    "model.layers.11.mlp_down": {
+        "pre": "model.layers.11.mlp_gateup",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.12.input_layernorm": {
+        "pre": "model.layers.11.mlp_down",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.12.self_attn_qkv": {
+        "pre": "model.layers.12.input_layernorm",
+        "do_folding": true,
+        "num_channels": 8,
+        "consistent_map": null
+    },
+    "model.layers.12.self_attn_o": {
+        "pre": "model.layers.12.self_attn_qkv",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.12.post_attention_layernorm": {
+        "pre": "model.layers.12.self_attn_o",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.12.mlp_gateup": {
+        "pre": "model.layers.12.post_attention_layernorm",
+        "do_folding": true,
+        "num_channels": 8192,
+        "consistent_map": null
+    },
+    "model.layers.12.mlp_down": {
+        "pre": "model.layers.12.mlp_gateup",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.13.input_layernorm": {
+        "pre": "model.layers.12.mlp_down",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.13.self_attn_qkv": {
+        "pre": "model.layers.13.input_layernorm",
+        "do_folding": true,
+        "num_channels": 8,
+        "consistent_map": null
+    },
+    "model.layers.13.self_attn_o": {
+        "pre": "model.layers.13.self_attn_qkv",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.13.post_attention_layernorm": {
+        "pre": "model.layers.13.self_attn_o",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.13.mlp_gateup": {
+        "pre": "model.layers.13.post_attention_layernorm",
+        "do_folding": true,
+        "num_channels": 8192,
+        "consistent_map": null
+    },
+    "model.layers.13.mlp_down": {
+        "pre": "model.layers.13.mlp_gateup",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.14.input_layernorm": {
+        "pre": "model.layers.13.mlp_down",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.14.self_attn_qkv": {
+        "pre": "model.layers.14.input_layernorm",
+        "do_folding": true,
+        "num_channels": 8,
+        "consistent_map": null
+    },
+    "model.layers.14.self_attn_o": {
+        "pre": "model.layers.14.self_attn_qkv",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.14.post_attention_layernorm": {
+        "pre": "model.layers.14.self_attn_o",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.14.mlp_gateup": {
+        "pre": "model.layers.14.post_attention_layernorm",
+        "do_folding": true,
+        "num_channels": 8192,
+        "consistent_map": null
+    },
+    "model.layers.14.mlp_down": {
+        "pre": "model.layers.14.mlp_gateup",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.15.input_layernorm": {
+        "pre": "model.layers.14.mlp_down",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.15.self_attn_qkv": {
+        "pre": "model.layers.15.input_layernorm",
+        "do_folding": true,
+        "num_channels": 8,
+        "consistent_map": null
+    },
+    "model.layers.15.self_attn_o": {
+        "pre": "model.layers.15.self_attn_qkv",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.layers.15.post_attention_layernorm": {
+        "pre": "model.layers.15.self_attn_o",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.layers.15.mlp_gateup": {
+        "pre": "model.layers.15.post_attention_layernorm",
+        "do_folding": true,
+        "num_channels": 8192,
+        "consistent_map": null
+    },
+    "model.layers.15.mlp_down": {
+        "pre": "model.layers.15.mlp_gateup",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": "model.embed_tokens"
+    },
+    "model.norm": {
+        "pre": "model.layers.15.mlp_down",
+        "do_folding": true,
+        "num_channels": 2048,
+        "consistent_map": null
+    },
+    "model.rotary_emb": {
+        "pre": "model.embed_tokens",
+        "do_folding": false,
+        "num_channels": null,
+        "consistent_map": null
+    },
+    "lm_head": {
+        "pre": "model.norm",
+        "do_folding": false,
+        "num_channels": 128256,
+        "consistent_map": null
+    },
+    "final_module_name": "lm_head"
+}

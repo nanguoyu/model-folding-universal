@@ -1,0 +1,9 @@
+.vscode/*
+*.pyc
+.DS_Store
+wandb
+datasets
+weights
+ffcv_datasets
+result
+checkpoints
