@@ -11,10 +11,10 @@
 
 <div align="center">
 
-[Dong Wang]()\*, 
-[Haris Šikić]()\*, 
-[Lothar Thiele](), 
-[Olga Saukh](),\
+[Dong Wang](https://wangdongdong.wang)\*, 
+[Haris Šikić](https://github.com/marza96)\*, 
+[Lothar Thiele](https://people.ee.ethz.ch/~thiele/), 
+[Olga Saukh](https://sites.google.com/view/olgasaukh/home),\
 Graz University of Technology, Austria  \
 Complexity Science Hub Vienna, Austria \
 ETH Zurich, Switzerland
@@ -114,7 +114,7 @@ CUDA_VISIBLE_DEVICES=1 python train.py --dataset=CIFAR100 --model=resnet50 --bat
 
 ### Folding Computer Vision Models
 
-**Option 1 (suggested)**: To reproduce the results in the paper for all computer vision models, you can go to [ModelFolding](https://github.com/marza96/ModelFolding).
+**Option 1 (suggested)**: To reproduce the results in the paper for all computer vision models, you can go to [modelfolding_cv](./modelfolding_cv/).
 
 Option 2: To use this universal folding code for most computer vision models, you can use the following command:
 ```Shell
