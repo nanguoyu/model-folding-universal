@@ -120,7 +120,7 @@ Option 2: To use this universal folding code for most computer vision models, yo
 ```Shell
 CUDA_VISIBLE_DEVICES=2 python folding.py  --gpus=0 --dataset=CIFAR10 --wider_factor=1 --weight='./weights/resnet18_CIFAR10.pth' --model=resnet18 --model_perm_config_path='./config/resnet18_perm.json'
 ```
-
+Note: the computer vision models used for both options are the same. You try cv models with [train.py](./train.py) and use the weights for both options.
 
 ### Folding LLM Models
 For example, to fold `Llama-1-7b`, you can use the following command:
