@@ -1,0 +1,4 @@
+[submodule "modelfolding_cv"]
+	path = modelfolding_cv
+	url = git@github.com:marza96/ModelFolding.git
+	branch = refactor
