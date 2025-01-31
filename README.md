@@ -63,8 +63,7 @@ For computer vision dataset
 - In case you installed the FFCV, you can go to [prepare_dataset.py](./prepare_dataset.py) to generate `.beton` dataset files.
 - In case you do not want to use FFCV, image dataset will be automatically downloaded from torchvision at the 1st time you run the code.
 
-For LLM dataset
-The dataset will be automatically downloaded from Hugging Face.
+For LLM dataset, the dataset will be automatically downloaded from Hugging Face.
 
 ### Prepare the model
 
@@ -114,7 +113,7 @@ CUDA_VISIBLE_DEVICES=1 python train.py --dataset=CIFAR100 --model=resnet50 --bat
 
 ### Folding Computer Vision Models
 
-**Option 1 (suggested)**: To reproduce the results in the paper for all computer vision models, you can go to [modelfolding_cv](./modelfolding_cv/).
+**Option 1 (suggested)**: To reproduce the results in the paper for all computer vision models, you can go to [./modelfolding_cv](https://github.com/marza96/ModelFolding/tree/33e2818e017c250aacbff62003e83bd87236ed17).
 
 Option 2: To use this universal folding code for most computer vision models, you can use the following command:
 ```Shell
