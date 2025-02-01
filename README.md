@@ -27,6 +27,10 @@ ETH Zurich, Switzerland
 
 **Model Folding** is a data-free model compression technique that merges structurally similar neurons across layers, reducing model size without fine-tuning or training data. It preserves data statistics using $k$-means clustering and novel variance control techniques. Experiments on ResNet18 and LLaMA-7B show that Model Folding matches data-driven compression methods and outperforms recent data-free approaches, especially at high sparsity levels, making it ideal for resource-constrained deployments.
 
+<div align="center">
+<img src="./docs/imgs/folding_animation.gif" width="500" alt="folding_animation" style="border-radius: 5%;">
+</div>
+
 <h2 id="Installation"> ⚙️ Installation</h2>
 
 ### (optional) Install Mamba or Use Conda
