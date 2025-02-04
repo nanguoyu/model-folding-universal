@@ -121,6 +121,14 @@ def prepare_data(split, dataset_name, datadir):
 prepare_data(split="train", dataset_name="CIFAR10", datadir="datasets")
 prepare_data(split="test", dataset_name="CIFAR10", datadir="datasets")
 
+# CIFAR10_split_a
+prepare_data(split="train", dataset_name="CIFAR10_split_a", datadir="datasets")
+prepare_data(split="test", dataset_name="CIFAR10_split_a", datadir="datasets")
+
+# CIFAR10_split_b
+prepare_data(split="train", dataset_name="CIFAR10_split_b", datadir="datasets")
+prepare_data(split="test", dataset_name="CIFAR10_split_b", datadir="datasets")
+
 # CIFAR100
 prepare_data(split="train", dataset_name="CIFAR100", datadir="datasets")
 prepare_data(split="test", dataset_name="CIFAR100", datadir="datasets")
