@@ -265,5 +265,12 @@ if __name__ == '__main__':
 # Training resnet50 on CIFAR100
 # CUDA_VISIBLE_DEVICES=1 python train.py --dataset=CIFAR100 --model=resnet50 --batch_size=512 --epochs=100 --learning_rate=0.1 --wider_factor=1
 
+# Training resnet50 on CIFAR100_split_a
+# CUDA_VISIBLE_DEVICES=1 python train.py --dataset=CIFAR100_split_a --model=resnet50 --batch_size=512 --epochs=100 --learning_rate=0.1 --wider_factor=1
+
+# Training resnet50 on CIFAR100_split_b
+# CUDA_VISIBLE_DEVICES=1 python train.py --dataset=CIFAR100_split_b --model=resnet50 --batch_size=512 --epochs=100 --learning_rate=0.1 --wider_factor=1
+
+
 # Imagenet
 # You do not need to train models on Imagenet, because torchvision has already provided the pretrained weights.
