@@ -36,6 +36,9 @@ dataset_infor = {
     'CIFAR100':{'num_classes':100, 'num_channels':3},
     'CIFAR10_split_a':{'num_classes':10, 'num_channels':3},
     'CIFAR10_split_b':{'num_classes':10, 'num_channels':3},
+    'SVHN':{'num_classes':10, 'num_channels':3},
+    'SVHN_split_a':{'num_classes':10, 'num_channels':3},
+    'SVHN_split_b':{'num_classes':10, 'num_channels':3},
 }
 
 def prepare_data(split, dataset_name, datadir):
@@ -44,6 +47,8 @@ def prepare_data(split, dataset_name, datadir):
     from ffcv.writer import DatasetWriter
     if dataset_name in ['CIFAR10_split_a', 'CIFAR10_split_b']:
         get_dataset = getattr(datasets, "CIFAR10")
+    elif dataset_name in ['SVHN_split_a', 'SVHN_split_b']:
+        get_dataset = getattr(datasets, "SVHN")
     else:
         get_dataset = getattr(datasets, dataset_name)
 
@@ -100,6 +105,36 @@ def prepare_data(split, dataset_name, datadir):
             dataset.targets = np_target[np_target > split_label]
             dataset.targets = dataset.targets[dataset.targets > split_label]
             dataset.data = dataset.data[np_target > split_label]
+    elif dataset_name == 'SVHN_split_a':
+        split_label = 5
+        image_field = RGBImageField(write_mode='smart', max_resolution=32, jpeg_quality=90)
+        if split == 'train':
+            dataset = get_dataset(root=datadir, split='train', download=True)
+            np_target = np.array(dataset.labels)
+            dataset.labels = np_target[np_target < split_label]
+            dataset.labels = dataset.labels[dataset.labels < split_label]
+            dataset.data = dataset.data[np_target < split_label]
+        else:
+            dataset = get_dataset(root=datadir, split='test', download=True)
+            np_target = np.array(dataset.labels)
+            dataset.labels = np_target[np_target < split_label]
+            dataset.labels = dataset.labels[dataset.labels < split_label]
+            dataset.data = dataset.data[np_target < split_label]
+    elif dataset_name == 'SVHN_split_b':
+        split_label = 4
+        image_field = RGBImageField(write_mode='smart', max_resolution=32, jpeg_quality=90)
+        if split == 'train':
+            dataset = get_dataset(root=datadir, split='train', download=True)
+            np_target = np.array(dataset.labels)
+            dataset.labels = np_target[np_target > split_label]
+            dataset.labels = dataset.labels[dataset.labels > split_label]
+            dataset.data = dataset.data[np_target > split_label]
+        else:
+            dataset = get_dataset(root=datadir, split='test', download=True)
+            np_target = np.array(dataset.labels)
+            dataset.labels = np_target[np_target > split_label]
+            dataset.labels = dataset.labels[dataset.labels > split_label]
+            dataset.data = dataset.data[np_target > split_label]
     else:
         image_field = RGBImageField(write_mode='smart', max_resolution=32, jpeg_quality=90)
         if split == 'train':
@@ -136,3 +171,15 @@ prepare_data(split="test", dataset_name="CIFAR100", datadir="datasets")
 # For ImageNet, `~/data/ImageNet` should be a folder containing files ILSVRC2012_devkit_t12.tar.gz, ILSVRC2012_img_train.tar, ILSVRC2012_img_val.tar 
 prepare_data(split="train", dataset_name="ImageNet", datadir="~/data/ImageNet")
 prepare_data(split="test", dataset_name="ImageNet", datadir="~/data/ImageNet")
+
+#SVHN
+prepare_data(split="train", dataset_name="SVHN", datadir="datasets")
+prepare_data(split="test", dataset_name="SVHN", datadir="datasets")
+
+#SVHN_split_a
+prepare_data(split="train", dataset_name="SVHN_split_a", datadir="datasets")
+prepare_data(split="test", dataset_name="SVHN_split_a", datadir="datasets")
+
+#SVHN_split_b
+prepare_data(split="train", dataset_name="SVHN_split_b", datadir="datasets")
+prepare_data(split="test", dataset_name="SVHN_split_b", datadir="datasets")
