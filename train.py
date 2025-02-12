@@ -252,9 +252,9 @@ if __name__ == '__main__':
 
 
 # Training resnet18 on SVHN
-# CUDA_VISIBLE_DEVICES=6 python train.py --dataset=SVHN --model=resnet18 --batch_size=256 --epochs=50 --learning_rate=0.01 --wider_factor=1
-# CUDA_VISIBLE_DEVICES=6 python train.py --dataset=SVHN_split_a --model=resnet18 --batch_size=256 --epochs=50 --learning_rate=0.01 --wider_factor=1
-# CUDA_VISIBLE_DEVICES=6 python train.py --dataset=SVHN_split_b --model=resnet18 --batch_size=256 --epochs=50 --learning_rate=0.01 --wider_factor=1
+# CUDA_VISIBLE_DEVICES=6 python train.py --dataset=SVHN --model=resnet18 --batch_size=128 --epochs=100 --learning_rate=0.01 --wider_factor=1
+# CUDA_VISIBLE_DEVICES=6 python train.py --dataset=SVHN_split_a --model=resnet18 --batch_size=128 --epochs=100 --learning_rate=0.01 --wider_factor=1
+# CUDA_VISIBLE_DEVICES=6 python train.py --dataset=SVHN_split_b --model=resnet18 --batch_size=128 --epochs=100 --learning_rate=0.01 --wider_factor=1
 
 # Training vgg11_bn on CIFAR10
 # CUDA_VISIBLE_DEVICES=6 python train.py --dataset=CIFAR10 --model=vgg11_bn --epochs=100 --learning_rate=0.1 --wider_factor=1
@@ -270,6 +270,16 @@ if __name__ == '__main__':
 
 # Training resnet50 on CIFAR100_split_b
 # CUDA_VISIBLE_DEVICES=1 python train.py --dataset=CIFAR100_split_b --model=resnet50 --batch_size=512 --epochs=100 --learning_rate=0.1 --wider_factor=1
+
+
+# Training resnet18 on GTSRB
+# CUDA_VISIBLE_DEVICES=1 python train.py --dataset=GTSRB --model=resnet18 --batch_size=256 --epochs=100 --learning_rate=0.1 --wider_factor=1
+
+# Training resnet18 on GTSRB_split_a
+# CUDA_VISIBLE_DEVICES=1 python train.py --dataset=GTSRB_split_a --model=resnet18 --batch_size=256 --epochs=100 --learning_rate=0.1 --wider_factor=1
+
+# Training resnet18 on GTSRB_split_b
+# CUDA_VISIBLE_DEVICES=1 python train.py --dataset=GTSRB_split_b --model=resnet18 --batch_size=256 --epochs=100 --learning_rate=0.1 --wider_factor=1
 
 
 # Imagenet
