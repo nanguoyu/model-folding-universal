@@ -1,7 +1,7 @@
 <div align="center">
   <h1>Forget the Data and Fine-Tuning! Just Fold the Network to Compress @ ICLR 2025</h1>
   <img src="docs/imgs/model_folding_logo.png" width="200" alt="Model Folding favicon" style="border-radius: 5%;"><br />
-<a href="https://openreview.net/forum?id=W2Wkp9MQsF" target="_blank"><img src="https://img.shields.io/badge/OpenReview-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt=""></a>
+<a href="https://arxiv.org/abs/2502.10216" target="_blank"><img src="https://img.shields.io/badge/Arxiv-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt=""></a>
 <a href="https://wangdongdong.wang/publication/modelfolding" target="_blank"><img src="https://img.shields.io/badge/Paper_Homepage-4A154B?style=for-the-badge&logo=Openreview&logoColor=white" alt=""></a>
 <a href="https://github.com/nanguoyu/model-folding-universal" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt=""></a> <br />
 
